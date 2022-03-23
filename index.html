@@ -12,6 +12,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Baloo+Bhaina+2:wght@400;600&family=Bangers&family=Fredoka+One&family=Fredoka:wght@400;600&family=Luckiest+Guy&family=Peralta&family=Ranchers&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
@@ -22,10 +28,13 @@
     <div id="wrapper">
       <!-- Header -->
       <header id="header" class="alt">
-        <span class="logo"><img src="images/banner.jpg" alt="" /></span>
-        <!-- <h1>Stellar</h1>
-						<p>Just another free, fully responsive site template<br />
-						built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p> -->
+        <span class="logo"><img src="images/banneryellow.jpg" alt="" /></span>
+        <h1>International Clown Festival</h1>
+        <p class="introduction">
+          26 of August to 4 of September 2022
+          <br />
+          Évora/Portugal
+        </p>
       </header>
 
       <!-- Nav -->
@@ -112,40 +121,65 @@
               posuere. Nulla massa urna, fermentum eget quam aliquet.
             </p>
           </header>
-          <ul class="statistics">
-            <li class="style1">
-              <span class="icon solid fa-code-branch"></span>
-              <strong>5,120</strong> Etiam
-            </li>
-            <li class="style2">
-              <span class="icon fa-folder-open"></span>
-              <strong>8,192</strong> Magna
-            </li>
-            <li class="style3">
-              <span class="icon solid fa-signal"></span>
-              <strong>2,048</strong> Tempus
-            </li>
-            <li class="style4">
-              <span class="icon solid fa-laptop"></span>
-              <strong>4,096</strong> Aliquam
-            </li>
-            <li class="style5">
-              <span class="icon fa-gem"></span>
-              <strong>1,024</strong> Nullam
-            </li>
-          </ul>
-          <p class="content">
-            Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu
-            arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac
-            arcu sit amet, fermentum pellentesque et purus. Integer maximus
-            varius lorem, sed convallis diam accumsan sed. Etiam porttitor
-            placerat sapien, sed eleifend a enim pulvinar faucibus semper quis
-            ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget
-            purus nec nulla mattis et accumsan ut magna libero. Morbi auctor
-            iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque.
-            Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui
-            curabitur lacinia.
-          </p>
+          <!-- Form -->
+          <div class="form">
+            <h2>Form</h2>
+            <form method="post" action="#">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="text"
+                    name="demo-name"
+                    id="demo-name"
+                    value=""
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="date" id="birthday" name="birthday" />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="email"
+                    name="demo-email"
+                    id="demo-email"
+                    value=""
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="(+351) 000 000 000"
+                  />
+                </div>
+
+                <div class="col-12">
+                  <textarea
+                    name="demo-message"
+                    id="demo-message"
+                    placeholder="Enter your message"
+                    rows="6"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li>
+                      <input
+                        type="submit"
+                        value="Send Message"
+                        class="primary"
+                      />
+                    </li>
+                    <li><input type="reset" value="Reset" /></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+
           <footer class="major">
             <ul class="actions special">
               <li><a href="generic.html" class="button">Learn More</a></li>
@@ -162,40 +196,64 @@
               posuere. Nulla massa urna, fermentum eget quam aliquet.
             </p>
           </header>
-          <ul class="statistics">
-            <li class="style1">
-              <span class="icon solid fa-code-branch"></span>
-              <strong>5,120</strong> Etiam
-            </li>
-            <li class="style2">
-              <span class="icon fa-folder-open"></span>
-              <strong>8,192</strong> Magna
-            </li>
-            <li class="style3">
-              <span class="icon solid fa-signal"></span>
-              <strong>2,048</strong> Tempus
-            </li>
-            <li class="style4">
-              <span class="icon solid fa-laptop"></span>
-              <strong>4,096</strong> Aliquam
-            </li>
-            <li class="style5">
-              <span class="icon fa-gem"></span>
-              <strong>1,024</strong> Nullam
-            </li>
-          </ul>
-          <p class="content">
-            Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu
-            arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac
-            arcu sit amet, fermentum pellentesque et purus. Integer maximus
-            varius lorem, sed convallis diam accumsan sed. Etiam porttitor
-            placerat sapien, sed eleifend a enim pulvinar faucibus semper quis
-            ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget
-            purus nec nulla mattis et accumsan ut magna libero. Morbi auctor
-            iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque.
-            Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui
-            curabitur lacinia.
-          </p>
+          <!-- Form -->
+          <div class="form">
+            <h2>Form</h2>
+            <form method="post" action="#">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="text"
+                    name="demo-name"
+                    id="demo-name"
+                    value=""
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="date" id="birthday" name="birthday" />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="email"
+                    name="demo-email"
+                    id="demo-email"
+                    value=""
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="(+351) 000 000 000"
+                  />
+                </div>
+
+                <div class="col-12">
+                  <textarea
+                    name="demo-message"
+                    id="demo-message"
+                    placeholder="Enter your message"
+                    rows="6"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li>
+                      <input
+                        type="submit"
+                        value="Send Message"
+                        class="primary"
+                      />
+                    </li>
+                    <li><input type="reset" value="Reset" /></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
           <footer class="major">
             <ul class="actions special">
               <li><a href="generic.html" class="button">Learn More</a></li>

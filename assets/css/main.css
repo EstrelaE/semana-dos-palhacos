@@ -6,6 +6,16 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+:root {
+  --mainTitle: "Bangers", cursive;
+  --secondTitle: "Luckiest Guy", cursive;
+  --bodyFont: "Baloo Bhaina 2", cursive;
+  --bakbak: "Bakbak One", cursive;
+  --fredoka: "Fredoka", sans-serif;
+  --fredokaOne: "Fredoka One", cursive;
+  --peralta: "Peralta", cursive;
+  --ranchers: "Ranchers", cursive;
+}
 
 html,
 body,
@@ -188,7 +198,7 @@ html {
 }
 
 body {
-  background-color: #ffd5b2;
+  background-color: #f9c51b;
 }
 
 body.is-preload *,
@@ -207,7 +217,7 @@ body.is-preload *:after {
 /* Type */
 
 body {
-  background-color: #ffd5b2;
+  background-color: #007dc2;
   color: rgba(255, 255, 255, 0.65);
 }
 
@@ -215,8 +225,8 @@ body,
 input,
 select,
 textarea {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 17pt;
+  font-family: var(--bodyFont);
+  font-size: 20pt;
   font-weight: 300;
   line-height: 1.65;
 }
@@ -2099,9 +2109,16 @@ label {
   margin: 0 0 1em 0;
 }
 
+#demo-message {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="tel"],
+input[type="date"],
 select,
 textarea {
   -moz-appearance: none;
@@ -2121,6 +2138,8 @@ textarea {
 input[type="text"]:invalid,
 input[type="password"]:invalid,
 input[type="email"]:invalid,
+input[type="tel"]:invalid,
+input[type="date"]:invalid,
 select:invalid,
 textarea:invalid {
   box-shadow: none;
@@ -2146,6 +2165,8 @@ select::-ms-expand {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="tel"],
+input[type="date"],
 select {
   height: 2.75em;
 }
@@ -2246,6 +2267,8 @@ label {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="tel"],
+input[type="date"],
 select,
 textarea {
   background-color: rgba(255, 255, 255, 0.075);
@@ -2255,6 +2278,8 @@ textarea {
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
 select:focus,
 textarea:focus {
   border-color: #8cc9f0;
@@ -3166,12 +3191,15 @@ table.alt tbody tr td {
 }
 
 #header h1 {
-  margin: 0 0 0.25em 0;
+  margin: 1em 0 0.25em 0;
+  font-family: var(--mainTitle);
+  letter-spacing: 0.1em;
 }
 
 #header p {
   font-size: 1.25em;
   letter-spacing: -0.025em;
+  word-spacing: 0.25em;
 }
 
 #header.alt {
@@ -3179,7 +3207,7 @@ table.alt tbody tr td {
 }
 
 #header.alt h1 {
-  font-size: 3.25em;
+  font-size: 3em;
 }
 
 #header.alt > * {
@@ -3210,7 +3238,10 @@ table.alt tbody tr td {
 #header.alt .logo img {
   display: block;
   margin: 0 auto;
-  max-width: 75%;
+  max-width: 100%;
+  border: 15px solid white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -3545,6 +3576,8 @@ body.is-preload #header.alt .logo {
 #main input[type="text"],
 #main input[type="password"],
 #main input[type="email"],
+#main input[type="tel"],
+#main input[type="date"],
 #main select,
 #main textarea {
   background-color: rgba(222, 222, 222, 0.25);
@@ -3554,6 +3587,8 @@ body.is-preload #header.alt .logo {
 #main input[type="text"]:focus,
 #main input[type="password"]:focus,
 #main input[type="email"]:focus,
+#main input[type="tel"]:focus,
+#main input[type="date"]:focus,
 #main select:focus,
 #main textarea:focus {
   border-color: #8cc9f0;
