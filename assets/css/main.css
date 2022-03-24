@@ -2763,6 +2763,7 @@ header.major {
 
 header.major h2 {
   font-size: 2em;
+  margin-bottom: 0;
 }
 
 header.major h2:after {
@@ -2770,7 +2771,7 @@ header.major h2:after {
   content: "";
   width: 3.25em;
   height: 2px;
-  margin: 0.7em 0 1em 0;
+  margin: 0.2em 0 0.4em 0;
   border-radius: 2px;
 }
 
@@ -3112,21 +3113,25 @@ table.alt tbody tr td {
 }
 
 .spotlight .content header.major {
-  margin: 0 0 2em 0;
+  margin: 0 0 0 0;
 }
 
-.spotlight .image {
+/* .spotlight .image {
   display: inline-block;
   margin-left: 4em;
   padding: 0.65em;
   border-radius: 100%;
   border: solid 1px;
-}
+} */
 
 .spotlight .image img {
   display: block;
-  border-radius: 100%;
+
   width: 16em;
+}
+
+.spotlight .content .name {
+  text-align: center;
 }
 
 @media screen and (max-width: 980px) {
@@ -3191,7 +3196,7 @@ table.alt tbody tr td {
 }
 
 #header h1 {
-  margin: 1em 0 0.25em 0;
+  margin: 0.5em 0 0.25em 0;
   font-family: var(--mainTitle);
   letter-spacing: 0.1em;
 }
@@ -3200,6 +3205,7 @@ table.alt tbody tr td {
   font-size: 1.25em;
   letter-spacing: -0.025em;
   word-spacing: 0.25em;
+  margin-bottom: 1em;
 }
 
 #header.alt {
@@ -3207,7 +3213,7 @@ table.alt tbody tr td {
 }
 
 #header.alt h1 {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 #header.alt > * {
@@ -3333,7 +3339,7 @@ body.is-preload #header.alt > * {
   position: absolute;
   width: 64em;
   max-width: calc(100% - 4em);
-  padding: 1em;
+  padding: 0.5em;
   background-color: #f7f7f7;
   border-top-left-radius: 0.25em;
   border-top-right-radius: 0.25em;
@@ -3707,12 +3713,12 @@ body.is-preload #header.alt > * {
   border-color: #dddddd;
 }
 
-#main .spotlight .image {
+/* #main .spotlight .image {
   border-color: #dddddd;
-}
+} */
 
 #main > .main {
-  padding: 5em 5em 3em 5em;
+  padding: 0 5em 3em 5em;
   border-top: solid 1px #dddddd;
 }
 
