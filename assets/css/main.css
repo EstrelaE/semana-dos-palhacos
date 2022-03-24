@@ -3203,7 +3203,7 @@ table.alt tbody tr td {
 }
 
 #header.alt {
-  padding: 7em 5em 4em 5em;
+  padding: 2em 5em 0 5em;
 }
 
 #header.alt h1 {
@@ -3238,9 +3238,7 @@ table.alt tbody tr td {
 #header.alt .logo img {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
-  border: 15px solid white;
-  border-radius: 10px;
+  max-width: 70%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -3311,12 +3309,12 @@ body.is-preload #header.alt > * {
   opacity: 0;
 }
 
-body.is-preload #header.alt .logo {
+/* body.is-preload #header.alt .logo {
   -moz-transform: scale(0.8) rotate(-30deg);
   -webkit-transform: scale(0.8) rotate(-30deg);
   -ms-transform: scale(0.8) rotate(-30deg);
   transform: scale(0.8) rotate(-30deg);
-}
+} */
 
 /* Nav */
 
