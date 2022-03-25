@@ -2101,6 +2101,26 @@ button.primary.icon:before,
 form {
   margin: 0 0 2em 0;
 }
+form p {
+  text-align: left;
+}
+
+form p strong {
+  font-weight: 600;
+}
+
+form a {
+  border: none;
+  text-decoration: underline;
+}
+form a:hover {
+  border: none;
+  text-decoration: none;
+}
+
+form small {
+  font-size: 0.8em;
+}
 
 label {
   display: block;
