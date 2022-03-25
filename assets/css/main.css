@@ -1915,7 +1915,7 @@ hr {
 .box {
   border-radius: 8px;
   border: solid;
-  margin-bottom: 2em;
+  margin-bottom: 0;
   padding: 1.5em;
 }
 
@@ -2764,6 +2764,7 @@ header.major {
 header.major h2 {
   font-size: 2em;
   margin-bottom: 0;
+  margin-top: 1em;
 }
 
 header.major h2:after {
@@ -3116,6 +3117,10 @@ table.alt tbody tr td {
   margin: 0 0 0 0;
 }
 
+.spotlight .content header h2 {
+  margin-top: 0.5em;
+}
+
 /* .spotlight .image {
   display: inline-block;
   margin-left: 4em;
@@ -3134,6 +3139,14 @@ table.alt tbody tr td {
   text-align: center;
 }
 
+.spotlight p {
+  font-size: 1.2em;
+}
+
+.spotlight .actions.special a.button {
+  font-size: 1.3em;
+}
+
 @media screen and (max-width: 980px) {
   .spotlight {
     -moz-flex-direction: column-reverse;
@@ -3150,7 +3163,9 @@ table.alt tbody tr td {
     flex: 0 1 auto;
     width: 100%;
   }
-
+  .spotlight .content header h2 {
+    margin-top: 0.5em;
+  }
   .spotlight .content header.major h2:after {
     margin-left: auto;
     margin-right: auto;
@@ -3171,6 +3186,16 @@ table.alt tbody tr td {
     flex: 0 1 auto;
     margin-left: 0;
     margin-bottom: 2em;
+  }
+
+  .spotlight p {
+    margin-right: 1em;
+    margin-left: 1em;
+    font-size: 1em;
+  }
+
+  .spotlight .actions.special a.button {
+    font-size: 1.1em;
   }
 }
 
@@ -3748,7 +3773,7 @@ body.is-preload #header.alt > * {
 
 @media screen and (max-width: 1280px) {
   #main > .main {
-    padding: 4em 4em 2em 4em;
+    padding: 0 4em 2em 4em;
   }
 
   #main > .main > .image.main:first-child {
@@ -3759,7 +3784,7 @@ body.is-preload #header.alt > * {
 
 @media screen and (max-width: 980px) {
   #main > .main {
-    padding: 2em 0.5em 1em 0.5em;
+    padding: 0 0.5em 1em 0.5em;
   }
 
   #main > .main > .image.main:first-child {
