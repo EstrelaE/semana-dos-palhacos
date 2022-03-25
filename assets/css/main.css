@@ -3174,18 +3174,22 @@ table.alt tbody tr td {
   }
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 980px) {
   .spotlight .image {
-    padding: 0.35em;
+    padding: 0;
   }
 
   .spotlight .image img {
     width: 12em;
   }
-}
 
-.spotlight .image {
-  border-color: rgba(255, 255, 255, 0.35);
+  .spotlight div.col-4 {
+    padding: 0.1em;
+  }
+  .spotlight div.row {
+    margin-right: 0.05em;
+    margin-left: 0.05em;
+  }
 }
 
 /* Header */
@@ -3755,7 +3759,7 @@ body.is-preload #header.alt > * {
 
 @media screen and (max-width: 980px) {
   #main > .main {
-    padding: 4em 3em 2em 3em;
+    padding: 2em 0.5em 1em 0.5em;
   }
 
   #main > .main > .image.main:first-child {
@@ -3766,7 +3770,7 @@ body.is-preload #header.alt > * {
 
 @media screen and (max-width: 736px) {
   #main > .main {
-    padding: 3em 2em 1em 2em;
+    padding: 2em 0.5em 1em 0.5em;
   }
 
   #main > .main > .image.main:first-child {
@@ -3777,7 +3781,7 @@ body.is-preload #header.alt > * {
 
 @media screen and (max-width: 480px) {
   #main > .main {
-    padding: 3em 1.5em 1em 1.5em;
+    padding: 2em 0.5em 1em 0.5em;
   }
 
   #main > .main > .image.main:first-child {
@@ -3792,7 +3796,7 @@ body.is-preload #header.alt > * {
   }
 
   #main > .main {
-    padding: 2.5em 1em 0.5em 1em;
+    padding: 2em 0.5em 1em 0.5em;
   }
 
   #main > .main > .image.main:first-child {
