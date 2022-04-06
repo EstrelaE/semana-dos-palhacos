@@ -15,6 +15,8 @@
   --fredokaOne: "Fredoka One", cursive;
   --peralta: "Peralta", cursive;
   --ranchers: "Ranchers", cursive;
+  --primaryColor: #007dc2;
+  --accentColor: #f9c51b;
 }
 
 html,
@@ -3380,17 +3382,19 @@ body {
 }
 
 .menu-container {
-  position: relative;
+  position: fixed;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  background: #232323;
-  color: #cdcdcd;
-  padding: 20px;
+  background: var(--accentColor);
+  padding: 1em;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
   box-sizing: border-box;
+  padding-top: 1em;
+
+  border-radius: 3px;
 }
 
 .menu-logo {
@@ -3398,22 +3402,24 @@ body {
   margin: 0 20px;
   margin-left: 0;
   border: none;
+  display: none;
 }
 
 .menu-logo img {
   max-height: 5em;
   max-width: 100px;
   flex-shrink: 0;
+  display: none;
 }
 
 .menu-container a {
   text-decoration: none;
-  color: #232323;
-  transition: color 0.3s ease;
+  color: black;
+  transition: color 0.4s ease;
 }
 
 .menu-container a:hover {
-  color: #00c6a7;
+  color: white;
 }
 
 .menu-container input {
@@ -3435,7 +3441,7 @@ body {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd;
+  background: var(--primaryColor);
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
@@ -3454,7 +3460,7 @@ body {
 .menu-container input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(3px, -1px);
-  background: #232323;
+  background: var(--primaryColor);
 }
 
 .menu-container input:checked ~ span:nth-child(4) {
@@ -3468,40 +3474,32 @@ body {
 
 .menu ul {
   list-style: none;
+  margin: 0 auto;
 }
 
 .menu li {
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 1.2em;
 }
 
 /* mobile styles */
-@media only screen and (max-width: 979px) {
+@media only screen and (max-width: 800px) {
   .menu-container {
     flex-direction: column;
     align-items: flex-end;
-  }
-
-  .menu-logo {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .menu-logo img {
-    max-height: 30px;
+    padding: 0.7em;
+    background: #f9c51bc0;
   }
 
   .menu {
-    position: absolute;
+    position: fixed;
     box-sizing: border-box;
-    width: 300px;
+    width: 230px;
     right: -300px;
     top: 0;
     margin: -20px;
-    padding: 75px 50px 50px;
-    background: #cdcdcd;
+    padding: 75px 10px 20px;
+    background: var(--accentColor);
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
@@ -3509,19 +3507,18 @@ body {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
+  .menu a {
+    font-size: 0.8em;
+  }
   .menu-container input:checked ~ .menu {
     transform: translateX(-100%);
   }
 }
 
 /* desktop styles */
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 800px) {
   .menu-container {
     width: 100%;
-  }
-
-  .menu-container a {
-    color: #cdcdcd;
   }
 
   .menu-container input {
@@ -3542,6 +3539,7 @@ body {
 
   .menu ul {
     display: flex;
+
     padding: 0;
   }
 
