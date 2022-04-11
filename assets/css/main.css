@@ -1948,6 +1948,21 @@ hr {
 
 /* Button */
 
+span.read-more {
+  text-decoration: underline;
+  color: var(--primaryColor);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+span.read-more:hover {
+  text-decoration: none;
+}
+
+#content .hide {
+  display: none;
+}
+
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -2105,6 +2120,9 @@ input[type="button"].primary.icon:before,
 button.primary.icon:before,
 .button.primary.icon:before {
   color: #ffffff !important;
+}
+#homeButton {
+  padding: 1em 0;
 }
 
 /* Form */
@@ -2829,6 +2847,10 @@ header.major.special h2:after {
 
 footer.major {
   margin-top: 3em;
+}
+
+section#content.main {
+  padding-top: 2em;
 }
 
 @media screen and (max-width: 736px) {
@@ -3663,6 +3685,7 @@ body {
   background-color: #ffffff;
   color: #636363;
   border-radius: 0.25em;
+  padding: 0 1em;
 }
 
 #main input,
@@ -3687,6 +3710,10 @@ body {
 #main h5,
 #main h6 {
   color: #636363;
+}
+
+#main .workshops h2:nth-of-type(2) {
+  margin-top: 1em;
 }
 
 #main blockquote {
