@@ -3491,26 +3491,20 @@ body {
 #nav.alt {
   position: fixed;
   top: 0;
-  padding: 0.5em 1em;
+  /* padding: 0.5em 1em; */
   background-color: rgba(247, 247, 247, 0.95);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   z-index: 10000;
 }
 
-.menu.alt {
-  position: fixed;
-  top: 0;
-  z-index: 100001;
-}
-
-#nav.alt ul li {
+/* #nav.alt ul li {
   margin: 0 0.175em;
 }
 
 #nav.alt ul li a {
   font-size: 0.9em;
-}
+} */
 
 #nav input {
   display: block;
@@ -3579,9 +3573,10 @@ body {
     display: list-item;
     position: absolute;
     box-sizing: border-box;
-    width: 230px;
+    text-align: right;
+    width: 150px;
     margin: -12px;
-    padding: 15px 10px 15px;
+    padding: 40px 10px 15px;
     background-color: var(--accentColor);
     transform-origin: 0% 0%;
     transform: translateX(0%);
