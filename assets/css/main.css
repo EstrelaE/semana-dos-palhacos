@@ -91,7 +91,6 @@ footer,
 header,
 hgroup,
 menu,
-nav,
 output,
 ruby,
 section,
@@ -100,6 +99,15 @@ time,
 mark,
 audio,
 video {
+  margin: 0;
+  padding: 0em;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+nav {
   margin: 0;
   padding: 0;
   border: 0;
@@ -3339,27 +3347,31 @@ table.alt tbody tr td {
   }
 
   #header.alt h1 {
-    font-size: 2.5em;
+    font-size: 1.8em;
+  }
+
+  #header.alt p {
+    font-size: 0.8em;
   }
 }
 
 @media screen and (max-width: 480px) {
   #header {
-    padding: 3em 1.5em 0.1em 1.5em;
+    padding: 2em 1.5em 0.1em 1.5em;
   }
 
   #header.alt {
-    padding: 4em 1.5em 1em 1.5em;
+    padding: 2em 1.5em 1em 1.5em;
   }
 }
 
 @media screen and (max-width: 360px) {
   #header {
-    padding: 2.5em 1em 0.1em 1em;
+    padding: 2em 1em 0.1em 1em;
   }
 
   #header.alt {
-    padding: 3.5em 1em 0.5em 1em;
+    padding: 2em 1em 0.5em 1em;
   }
 }
 
@@ -3556,6 +3568,12 @@ body {
   transform: rotate(-45deg) translate(-5px, 11px);
 }
 
+@media screen and (max-width: 840px) {
+  #nav {
+    max-width: calc(100% - 1em);
+  }
+}
+
 /*Mobile Devices*/
 @media screen and (max-width: 800px) {
   #nav {
@@ -3563,6 +3581,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     padding: 0.7em;
+    max-width: calc(100% - 1em);
   }
 
   #nav + #main {
@@ -3597,9 +3616,15 @@ body {
   }
 }
 
+@media screen and (max-width: 700px) {
+  #nav {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   #nav {
-    max-width: calc(100% - 2em);
+    max-width: 100%;
   }
 }
 
@@ -3609,6 +3634,7 @@ body {
   }
 }
 /* Desktop Styles */
+
 @media only screen and (min-width: 801px) {
   #nav input {
     display: none;
@@ -4060,13 +4086,13 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 840px) {
   #wrapper {
-    max-width: calc(100% - 2em);
+    max-width: calc(100% - 1em);
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 700px) {
   #wrapper {
     max-width: 100%;
   }
