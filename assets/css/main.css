@@ -3498,6 +3498,12 @@ body {
   z-index: 10000;
 }
 
+.menu.alt {
+  position: fixed;
+  top: 0;
+  z-index: 100001;
+}
+
 #nav.alt ul li {
   margin: 0 0.175em;
 }
@@ -3571,7 +3577,7 @@ body {
 
   .menu {
     display: list-item;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     width: 230px;
     margin: -12px;
