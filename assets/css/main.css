@@ -2801,6 +2801,63 @@ ul.icons li:last-child {
 
 /* Section/Article */
 
+#intro.teaserContent {
+  margin-top: 0.1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  border: 1px solid white;
+  border-radius: 0.5em;
+}
+
+section#festival.teaser {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+section#festival.teaser h3 {
+  text-align: center;
+  font-size: 2em;
+}
+section#festival.teaser li {
+  font-size: 1.2em;
+  color: white;
+}
+
+section#clownSchool.teaser {
+  background-color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em;
+
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+#clownSchool.teaser .clownLogo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+#clownSchool.teaser .masters {
+  display: flex;
+  justify-content: space-around;
+}
+
+#clownSchool.teaser .masters img {
+  margin: 0.1em;
+  max-width: 10em;
+}
+
+section#clownSchool.teaser img {
+  max-width: 50%;
+}
+
 section.special,
 article.special {
   text-align: center;
@@ -3282,10 +3339,26 @@ table.alt tbody tr td {
   text-align: center;
 }
 
+#header.landing {
+  padding: 2em 1em 1em 1em;
+}
+
 #header h1 {
   margin: 0.5em 0 0.25em 0;
   font-family: var(--mainTitle);
   letter-spacing: 0.1em;
+}
+
+#header.landing h1#name {
+  font-family: var(--bodyFont);
+  letter-spacing: none;
+  margin-top: 0.5em;
+  font-size: 2em;
+  padding-top: 0.2em;
+  color: #fffcc8;
+  border-radius: 10px;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.325);
 }
 
 #header p {
@@ -3974,6 +4047,12 @@ body {
   border-top: solid 1px #dddddd;
 }
 
+.landing #main > .main {
+  margin-top: 1.5em;
+  padding: 1em 2em 1em 2em;
+  text-align: center;
+}
+
 #main > .main:first-child {
   border-top: 0;
 }
@@ -4137,9 +4216,27 @@ body {
   margin: 0 auto;
 }
 
+#wrapper.landing {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1700px) {
+  #wrapper.landing {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  #header.landing .logo img {
+    max-width: 65%;
+  }
+}
+
 @media screen and (max-width: 840px) {
   #wrapper {
     max-width: calc(100% - 1em);
+  }
+
+  #wrapper.landing {
+    max-width: 100%;
   }
 }
 
