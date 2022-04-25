@@ -2800,6 +2800,17 @@ ul.icons li:last-child {
 }
 
 /* Section/Article */
+#header.landing h1#name {
+  font-family: var(--bodyFont);
+  letter-spacing: none;
+  margin-top: 0.5em;
+  font-size: 2em;
+  padding-top: 0.2em;
+  color: #fffcc8;
+  border-radius: 10px;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.325);
+}
 
 #intro.teaserContent {
   margin-top: 0.1em;
@@ -2807,7 +2818,7 @@ ul.icons li:last-child {
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 0.5em;
 }
 
@@ -2822,9 +2833,29 @@ section#festival.teaser h3 {
   text-align: center;
   font-size: 2em;
 }
+
+section#festival.teaser p {
+  text-align: center;
+  margin-bottom: 0.1em;
+  color: white;
+  font-size: 1.3em;
+  display: none;
+}
 section#festival.teaser li {
   font-size: 1.2em;
   color: white;
+  list-style: none;
+  padding: 0.5em;
+  border: 1px solid white;
+  margin: 0.5em;
+  border-radius: 0.4em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.3s all ease-in-out;
+}
+section#festival.teaser li:hover {
+  color: var(--primaryColor);
+  background-color: #fffcc8;
+  border: 1px solid white;
 }
 
 section#clownSchool.teaser {
@@ -2833,9 +2864,6 @@ section#clownSchool.teaser {
   display: flex;
   flex-direction: column;
   padding: 1em 1em;
-
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
 }
 
 #clownSchool.teaser .clownLogo {
@@ -2913,6 +2941,88 @@ footer.major {
 
 section#content.main {
   padding-top: 2em;
+}
+
+@media screen and (min-height: 980px) {
+  #header.landing h1#name {
+    font-size: 1.8em;
+  }
+  #intro.teaserContent {
+    flex-direction: column;
+  }
+  section#festival.teaser {
+    width: 100%;
+  }
+
+  section#clownSchool.teaser {
+    width: 100%;
+    border-radius: none;
+  }
+  section#festival.teaser li {
+    font-size: 1em;
+    color: white;
+    list-style: none;
+    padding: 0.5em;
+    border: 1px solid white;
+    margin: 0.5em;
+    border-radius: 0.4em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.3s all ease-in-out;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #header.landing h1#name {
+    font-size: 1.8em;
+  }
+  #intro.teaserContent {
+    flex-direction: column;
+  }
+
+  section#festival.teaser {
+    width: 100%;
+  }
+  section#festival.teaser li {
+    font-size: 1em;
+    color: white;
+    list-style: none;
+    padding: 0.3em;
+    border: 1px solid white;
+    margin: 0.5em;
+    border-radius: 0.4em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  section#clownSchool.teaser {
+    width: 100%;
+    border-radius: none;
+  }
+
+  #clownSchool.teaser .masters img {
+    display: flex;
+    margin: 0 auto;
+    max-width: 10em;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  #header.landing h1#name {
+    font-size: 2em;
+  }
+  #intro.teaserContent {
+    flex-direction: row;
+  }
+
+  section#festival.teaser {
+    width: 50%;
+  }
+
+  section#clownSchool.teaser {
+    width: 50%;
+    border-top-right-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+  }
 }
 
 @media screen and (max-width: 736px) {
@@ -3349,18 +3459,6 @@ table.alt tbody tr td {
   letter-spacing: 0.1em;
 }
 
-#header.landing h1#name {
-  font-family: var(--bodyFont);
-  letter-spacing: none;
-  margin-top: 0.5em;
-  font-size: 2em;
-  padding-top: 0.2em;
-  color: #fffcc8;
-  border-radius: 10px;
-  font-weight: 600;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.325);
-}
-
 #header p {
   font-size: 1.25em;
   letter-spacing: -0.025em;
@@ -3481,6 +3579,13 @@ table.alt tbody tr td {
 
   #header.alt {
     padding: 2em 1.5em 1em 1.5em;
+  }
+
+  #header.landing {
+    padding-bottom: 0.1em;
+  }
+  #header.landing h1#name {
+    font-size: 1.5em;
   }
 }
 
@@ -4217,12 +4322,12 @@ body {
 }
 
 #wrapper.landing {
-  max-width: 100%;
+  max-width: calc(100% - 4em);
 }
 
 @media screen and (min-width: 1700px) {
   #wrapper.landing {
-    max-width: 100%;
+    max-width: calc(100% - 4em);
     margin: 0 auto;
   }
   #header.landing .logo img {
@@ -4236,7 +4341,7 @@ body {
   }
 
   #wrapper.landing {
-    max-width: 100%;
+    max-width: calc(100% - 1em);
   }
 }
 
