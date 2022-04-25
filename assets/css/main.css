@@ -1947,7 +1947,9 @@ hr {
 }
 
 /* Button */
-
+.landing .button {
+  margin-left: 1em;
+}
 span.read-more {
   text-decoration: underline;
   color: var(--primaryColor);
@@ -2943,6 +2945,15 @@ section#content.main {
   padding-top: 2em;
 }
 
+@media screen and (min-width: 500px) {
+  section#clownSchool.teaser img {
+    max-width: 30%;
+  }
+  #clownSchool.teaser .masters {
+    justify-content: center;
+  }
+}
+
 @media screen and (min-height: 980px) {
   #header.landing h1#name {
     font-size: 1.8em;
@@ -3003,6 +3014,24 @@ section#content.main {
     display: flex;
     margin: 0 auto;
     max-width: 10em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section#clownSchool.teaser img {
+    max-width: 30%;
+  }
+  #clownSchool.teaser .masters img {
+    max-width: 8em;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  #clownSchool.teaser .masters {
+    flex-direction: column;
+  }
+  #clownSchool.teaser .masters img {
+    max-width: 9em;
   }
 }
 
@@ -3800,6 +3829,9 @@ body {
 
 /*Mobile Devices*/
 @media screen and (max-width: 800px) {
+  #header.landing .desktop {
+    display: none;
+  }
   #nav {
     background: transparent;
     flex-direction: column;
@@ -3841,18 +3873,27 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  #header.landing .desktop {
+    display: none;
+  }
   #nav {
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 480px) {
+  #header.landing .desktop {
+    display: none;
+  }
   #nav {
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 360px) {
+  #header.landing .desktop {
+    display: none;
+  }
   #nav {
     max-width: 100%;
   }
@@ -3860,6 +3901,13 @@ body {
 /* Desktop Styles */
 
 @media only screen and (min-width: 801px) {
+  #header.landing .mobile {
+    display: none;
+  }
+  #title h1,
+  #title h3 {
+    display: none;
+  }
   #nav input {
     display: none;
   }
