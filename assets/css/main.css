@@ -1947,7 +1947,9 @@ hr {
 }
 
 /* Button */
-
+.landing .button {
+  margin-left: 1em;
+}
 span.read-more {
   text-decoration: underline;
   color: var(--primaryColor);
@@ -2528,8 +2530,9 @@ input[type="radio"]:focus + label:before {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Image */
+/* Text overlay image - maybe one day */
 
+/* Image */
 .image {
   border-radius: 8px;
   border: 0;
@@ -2800,6 +2803,114 @@ ul.icons li:last-child {
 }
 
 /* Section/Article */
+#header.landing h1#name {
+  font-family: var(--bodyFont);
+  letter-spacing: none;
+  margin-top: 0.5em;
+  font-size: 2em;
+  padding-top: 0.2em;
+  color: #fffcc8;
+  border-radius: 10px;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.325);
+}
+
+#intro.teaserContent {
+  margin-top: 0.1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  border: 2px solid white;
+  border-radius: 0.5em;
+}
+
+section#festival.teaser {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+section#festival.teaser h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+section#festival.teaser p {
+  text-align: center;
+  margin-bottom: 0.1em;
+  color: white;
+  font-size: 1.3em;
+  display: none;
+}
+
+section#festival.teaser ul {
+  padding: 0;
+}
+section#festival.teaser li {
+  font-size: 1.2em;
+  color: white;
+  list-style: none;
+  padding: 0.5em;
+  border: 1px solid white;
+  margin: 0.5em;
+  border-radius: 0.4em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.3s all ease-in-out;
+}
+section#festival.teaser li:hover {
+  color: var(--primaryColor);
+  background-color: #fffcc8;
+  border: 1px solid white;
+}
+
+section#clownSchool.teaser {
+  background-color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em;
+}
+#clownSchool.teaser .clownLogo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+  margin: 0 auto; /*might need to be media query*/
+}
+
+#clownSchool.teaser .clownLogo img {
+  width: 15em;
+}
+
+#clownSchool.teaser .clownLogo.vertical {
+  display: none;
+}
+
+#clownSchool.teaser .masters-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#clownSchool.teaser .masters-container img {
+  margin: 0.1em;
+  max-width: 10em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 0.2em;
+}
+
+#clownSchool.teaser .masters {
+  display: flex;
+  flex-direction: column;
+}
+
+#clownSchool.teaser .masters span {
+  color: black;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
 
 section.special,
 article.special {
@@ -2808,6 +2919,11 @@ article.special {
 
 header.major {
   margin-bottom: 3em;
+}
+
+header.major h1 {
+  text-align: center;
+  padding-top: 1em;
 }
 
 header.major h2 {
@@ -2851,6 +2967,182 @@ footer.major {
 
 section#content.main {
   padding-top: 2em;
+}
+
+@media screen and (min-height: 980px) {
+  #header.landing h1#name {
+    font-size: 1.8em;
+  }
+  #intro.teaserContent {
+    flex-direction: column;
+  }
+  section#festival.teaser {
+    width: 100%;
+  }
+
+  section#clownSchool.teaser {
+    width: 100%;
+    border-radius: none;
+  }
+  section#festival.teaser li {
+    font-size: 1em;
+    color: white;
+    list-style: none;
+    padding: 0.5em;
+    border: 1px solid white;
+    margin: 0.5em;
+    border-radius: 0.4em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.3s all ease-in-out;
+  }
+}
+
+/* small screens */
+@media screen and (max-width: 1349px) {
+  #header.landing h1#name {
+    font-size: 1.8em;
+  }
+  #intro.teaserContent {
+    flex-direction: column;
+  }
+
+  section#festival.teaser {
+    width: 100%;
+  }
+
+  section#festival.teaser li {
+    font-size: 1.15em;
+    display: inline;
+    padding: 0.15em 1em 0 1em;
+  }
+
+  section#clownSchool.teaser {
+    width: 100%;
+    border-radius: none;
+    flex-direction: row;
+  }
+  section#clownSchool.teaser img {
+    /*max-width: 30%;*/
+    width: 20em !important;
+  }
+
+  #clownSchool.teaser .masters-container {
+    /* justify-content: center; */
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+
+  #clownSchool.teaser .masters-container img {
+    display: flex;
+    margin: 0 auto;
+    max-width: 12em;
+    margin-right: 0.5em;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  section#clownSchool.teaser {
+    flex-direction: column;
+  }
+
+  #clownSchool.teaser .clownLogo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+  }
+
+  section#clownSchool.teaser img {
+    width: 15em;
+  }
+
+  #clownSchool.teaser .clownLogo.vertical {
+    display: none;
+  }
+
+  #clownSchool.teaser .masters-container img {
+    width: 20em;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  section#festival.teaser li {
+    display: block;
+    padding: 0.4em 1em 0.1em 1em;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  /* section#clownSchool.teaser {
+    flex-direction: row;
+  }
+
+  #clownSchool.teaser .clownLogo.vertical {
+    display: flex;
+    align-content: center;
+    margin: 0;
+  }
+*/
+
+  #clownSchool.teaser .clownLogo img {
+    width: 15em !important;
+  }
+
+  #clownSchool.teaser .masters-container {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  #clownSchool.teaser .masters {
+    flex-direction: row;
+    margin-top: 1em;
+  }
+
+  #clownSchool.teaser .masters span {
+    flex-direction: row;
+    margin-top: 0.5em;
+    display: flex;
+    align-items: center;
+  }
+
+  #clownSchool.teaser .masters-container img {
+    max-width: 12em;
+  }
+
+  .landing .content .button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  section#clownSchool.teaser img {
+    width: 9em !important;
+  }
+  #clownSchool.teaser .masters {
+    flex-direction: column;
+  }
+  #clownSchool.teaser .masters-container {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  #header.landing h1#name {
+    font-size: 2em;
+  }
+  #intro.teaserContent {
+    flex-direction: row;
+  }
+
+  section#festival.teaser {
+    width: 50%;
+  }
+
+  section#clownSchool.teaser {
+    width: 50%;
+    border-top-right-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+  }
 }
 
 @media screen and (max-width: 736px) {
@@ -3277,6 +3569,10 @@ table.alt tbody tr td {
   text-align: center;
 }
 
+#header.landing {
+  padding: 2em 1em 1em 1em;
+}
+
 #header h1 {
   margin: 0.5em 0 0.25em 0;
   font-family: var(--mainTitle);
@@ -3328,6 +3624,25 @@ table.alt tbody tr td {
   margin: 0 auto;
   max-width: 70%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#header.landing .logo {
+  -moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
+  -webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
+  -ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
+  transition: opacity 1.25s ease, transform 0.5s ease;
+  -moz-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  transition-delay: 0s;
+  display: block;
+  margin: 0 0 1.5em 0;
+}
+
+#header.landing .logo img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 1280px) {
@@ -3384,6 +3699,13 @@ table.alt tbody tr td {
 
   #header.alt {
     padding: 2em 1.5em 1em 1.5em;
+  }
+
+  #header.landing {
+    padding-bottom: 0.1em;
+  }
+  #header.landing h1#name {
+    font-size: 1.5em;
   }
 }
 
@@ -3598,6 +3920,9 @@ body {
 
 /*Mobile Devices*/
 @media screen and (max-width: 800px) {
+  #header.landing .desktop {
+    display: none;
+  }
   #nav {
     background: transparent;
     flex-direction: column;
@@ -3639,18 +3964,27 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  #header.landing .desktop {
+    display: none;
+  }
   #nav {
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 480px) {
+  #header.landing .desktop {
+    display: none;
+  }
   #nav {
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 360px) {
+  #header.landing .desktop {
+    display: none;
+  }
   #nav {
     max-width: 100%;
   }
@@ -3658,6 +3992,13 @@ body {
 /* Desktop Styles */
 
 @media only screen and (min-width: 801px) {
+  #header.landing .mobile {
+    display: none;
+  }
+  #title h1,
+  #title h3 {
+    display: none;
+  }
   #nav input {
     display: none;
   }
@@ -3950,6 +4291,12 @@ body {
   border-top: solid 1px #dddddd;
 }
 
+.landing #main > .main {
+  margin-top: 1.5em;
+  padding: 1em 2em 1em 2em;
+  text-align: center;
+}
+
 #main > .main:first-child {
   border-top: 0;
 }
@@ -4113,8 +4460,26 @@ body {
   margin: 0 auto;
 }
 
+#wrapper.landing {
+  max-width: calc(100% - 4em);
+}
+
+@media screen and (min-width: 1700px) {
+  #wrapper.landing {
+    max-width: calc(100% - 4em);
+    margin: 0 auto;
+  }
+  #header.landing .logo img {
+    max-width: 65%;
+  }
+}
+
 @media screen and (max-width: 840px) {
   #wrapper {
+    max-width: calc(100% - 1em);
+  }
+
+  #wrapper.landing {
     max-width: calc(100% - 1em);
   }
 }
@@ -4122,5 +4487,13 @@ body {
 @media screen and (max-width: 700px) {
   #wrapper {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #wrapper.landing {
+    max-width: 80%;
+    margin-right: 2em;
+    margin-left: 1em;
   }
 }
