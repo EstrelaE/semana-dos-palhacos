@@ -2530,8 +2530,9 @@ input[type="radio"]:focus + label:before {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Image */
+/* Text overlay image - maybe one day */
 
+/* Image */
 .image {
   border-radius: 8px;
   border: 0;
@@ -2843,6 +2844,10 @@ section#festival.teaser p {
   font-size: 1.3em;
   display: none;
 }
+
+section#festival.teaser ul {
+  padding: 0;
+}
 section#festival.teaser li {
   font-size: 1.2em;
   color: white;
@@ -2867,25 +2872,44 @@ section#clownSchool.teaser {
   flex-direction: column;
   padding: 1em 1em;
 }
-
 #clownSchool.teaser .clownLogo {
   display: flex;
   justify-content: center;
   margin-bottom: 1em;
+  margin: 0 auto; /*might need to be media query*/
 }
 
-#clownSchool.teaser .masters {
+#clownSchool.teaser .clownLogo img {
+  width: 15em;
+}
+
+#clownSchool.teaser .clownLogo.vertical {
+  display: none;
+}
+
+#clownSchool.teaser .masters-container {
   display: flex;
   justify-content: space-around;
 }
 
-#clownSchool.teaser .masters img {
+#clownSchool.teaser .masters-container img {
   margin: 0.1em;
   max-width: 10em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 0.2em;
 }
 
-section#clownSchool.teaser img {
-  max-width: 50%;
+#clownSchool.teaser .masters {
+  display: flex;
+  flex-direction: column;
+}
+
+#clownSchool.teaser .masters span {
+  color: black;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 1em;
 }
 
 section.special,
@@ -2945,15 +2969,6 @@ section#content.main {
   padding-top: 2em;
 }
 
-@media screen and (min-width: 500px) {
-  section#clownSchool.teaser img {
-    max-width: 30%;
-  }
-  #clownSchool.teaser .masters {
-    justify-content: center;
-  }
-}
-
 @media screen and (min-height: 980px) {
   #header.landing h1#name {
     font-size: 1.8em;
@@ -2982,7 +2997,8 @@ section#content.main {
   }
 }
 
-@media screen and (max-width: 900px) {
+/* small screens */
+@media screen and (max-width: 1349px) {
   #header.landing h1#name {
     font-size: 1.8em;
   }
@@ -2993,45 +3009,120 @@ section#content.main {
   section#festival.teaser {
     width: 100%;
   }
+
   section#festival.teaser li {
-    font-size: 1em;
-    color: white;
-    list-style: none;
-    padding: 0.3em;
-    border: 1px solid white;
-    margin: 0.5em;
-    border-radius: 0.4em;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: 0.3s all ease-in-out;
+    font-size: 1.15em;
+    display: inline;
+    padding: 0.15em 1em 0 1em;
   }
 
   section#clownSchool.teaser {
     width: 100%;
     border-radius: none;
+    flex-direction: row;
+  }
+  section#clownSchool.teaser img {
+    /*max-width: 30%;*/
+    width: 20em !important;
   }
 
-  #clownSchool.teaser .masters img {
+  #clownSchool.teaser .masters-container {
+    /* justify-content: center; */
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+
+  #clownSchool.teaser .masters-container img {
     display: flex;
     margin: 0 auto;
-    max-width: 10em;
+    max-width: 12em;
+    margin-right: 0.5em;
+    margin-left: 0;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1010px) {
+  section#clownSchool.teaser {
+    flex-direction: column;
+  }
+
+  #clownSchool.teaser .clownLogo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+  }
+
   section#clownSchool.teaser img {
-    max-width: 30%;
+    width: 15em;
   }
-  #clownSchool.teaser .masters img {
-    max-width: 8em;
+
+  #clownSchool.teaser .clownLogo.vertical {
+    display: none;
+  }
+
+  #clownSchool.teaser .masters-container img {
+    width: 20em;
   }
 }
 
-@media screen and (max-width: 405px) {
+@media screen and (max-width: 880px) {
+  section#festival.teaser li {
+    display: block;
+    padding: 0.4em 1em 0.1em 1em;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  /* section#clownSchool.teaser {
+    flex-direction: row;
+  }
+
+  #clownSchool.teaser .clownLogo.vertical {
+    display: flex;
+    align-content: center;
+    margin: 0;
+  }
+*/
+
+  #clownSchool.teaser .clownLogo img {
+    width: 15em !important;
+  }
+
+  #clownSchool.teaser .masters-container {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  #clownSchool.teaser .masters {
+    flex-direction: row;
+    margin-top: 1em;
+  }
+
+  #clownSchool.teaser .masters span {
+    flex-direction: row;
+    margin-top: 0.5em;
+    display: flex;
+    align-items: center;
+  }
+
+  #clownSchool.teaser .masters-container img {
+    max-width: 12em;
+  }
+
+  .landing .content .button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  section#clownSchool.teaser img {
+    width: 9em !important;
+  }
   #clownSchool.teaser .masters {
     flex-direction: column;
   }
-  #clownSchool.teaser .masters img {
-    max-width: 9em;
+  #clownSchool.teaser .masters-container {
+    margin-top: 0;
   }
 }
 
@@ -4396,5 +4487,13 @@ body {
 @media screen and (max-width: 700px) {
   #wrapper {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #wrapper.landing {
+    max-width: 80%;
+    margin-right: 2em;
+    margin-left: 1em;
   }
 }
